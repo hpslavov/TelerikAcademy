@@ -1,0 +1,31 @@
+1.Java
+Java is a class-based, object-oriented programming language developed by Sun Microsystems in the 1990s. It's one of the most in-demand programming languages, a standard for enterprise software, web-based content, games and mobile apps, as well as the Android operating system. Java is designed to work across multiple software platforms, meaning a program written on Mac OS X, for example, could also run on Windows.
+
+Most developers, especially those with a background in C or C++, would probably agree that features like operator overloading, pointers, preprocessor directives, delegates and deterministic object cleanup make C# more expressive than Java in a number of cases. Similarly, Java developers who learn C# will be pleasantly surprised at features that are missing in Java that will seem glaring in their absence once one uses them in C#, such as boxing, enumerations and pass by reference. On the other hand the lack of checked exceptions, inner classes, cross platform portability or the fact that a class is not the smallest unit of distribution of code makes the choice of C# over Java not a clearcut case of choosing more language features without having to make any compromises.
+
+2.Perl
+Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. The languages in this family include Perl 5 and Perl 6. Perl was originally developed by Larry Wall in 1987 as a general-purpose Unix scripting language to make report processing easier. The Perl languages borrow features from other programming languages including C, shell scripting (sh), AWK, and sed.They provide powerful text processing facilities without the arbitrary data-length limits of many contemporary Unix commandline tools, facilitating easy manipulation of text files. Perl 5 gained widespread popularity in the late 1990s as a CGI scripting language, in part due to its parsing abilities.
+Perl is add-on/hybrid object-oriented language. It has multiple inheritance with dynamic typing and a reference counting garbage collector.Perl has no access control, buil-in regular expressions and built in security(persec).
+
+ 
+3.PHP
+PHP (Hypertext Processor) is a free, server-side scripting language designed for dynamic websites and app development. It can be directly embedded into an HTML source document rather than an external file, which has made it a popular programming language for web developers. PHP powers more than 200 million websites, including Wordpress, Digg and Facebook.
+Over windows platform C# codes are run but on the other hand if ASP-Apache is being installed on the server it can run over Linux platform too. PHP is far better is such case as its code can be linked with number of platforms for example Windows, Linux and Unix and many more. 
+In short, PHP has power to work with any kind of platform no matter whether it is Mac OS X, Windows , Unix, Linux or any other but C# can go with Microsoft Windows.
+PHP is a language itself which supports syntax of C and C++ whereas C# is one of the languages which is supported by .NET framework which supports more than 60+ languages.
+
+4.Python
+ Python is a high-level, server-side scripting language for websites and mobile apps. It's considered a fairly easy language for beginners due to its readability and compact syntax, meaning developers can use fewer lines of code to express a concept than they would in other languages. It powers the web apps for Instagram, Pinterest and Rdio through its associated web framework, Django, and is used by Google, Yahoo! and NASA.
+C# projects are often proprietary, windows-based applications. There's very few non-windows C# projects.
+Python supports cross-platform operating systems.
+C# paradigms are structured,imperative,procedural,object-oriented,event-driven,functional,generic,reflective,concurrent.
+Python follows object-oriented,imperative,functional,procedural and reflective paradigms.
+
+
+5.Ruby
+A dynamic, object-oriented scripting language for developing websites and mobile apps, Ruby was designed to be simple and easy to write. It powers the Ruby on Rails (or Rails) framework, which is used on Scribd, GitHub, Groupon and Shopify. Like Python, Ruby is considered a fairly user-friendly language for beginners.
+Ruby is pure object-oriented language with dynamic typing and single class,multiple "mixins" inheritance.
+C# has hybrid object-orientation with static typing and single class,multiple interfaces inheritance.
+Both C# and Ruby has mark and sweep  garbage collection while C# has an additional Generational option.
+While while both languages access control is public,protected and private,C# possess an additional internal and protected internal access control.
+Both C# and Ruby has built-in security.

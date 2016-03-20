@@ -1,0 +1,24 @@
+﻿@model BitCalculator.Areas.Calculator.Models.ResultObjectModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<ul style="list-style-type:none">
+    <li>@Model.Input</li>
+    <li><strong>@Model.Option</strong></li>
+    <li>Bit - @Model.Bit</li>
+    <li>Byte - @Model.Byte</li>
+    <li>KiloBit - @Model.KiloBit</li>
+    <li>KiloByte - @Model.KiloByte</li>
+    <li>MegaBit - @Model.MegaBit</li>
+    <li>MegaByte - @Model.MegaByte</li>
+    <li>GigaBit - @Model.GigaBit</li>
+    <li>GigaByte - @Model.GigaByte</li>
+    <li>TeraBit - @Model.TeraBit</li>
+    <li>TeraByte - @Model.TeraByte</li>
+</ul>
+
+@if (Request.UrlReferrer != null)
+{
+    <a class="btn-danger" onclick="history.go(-1); return false;" href="#">Back</a><br />
+}
+

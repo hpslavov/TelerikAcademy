@@ -1,0 +1,11 @@
+﻿@model List<TwitterLike.Models.UsersViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var user in Model)
+{
+    <h2>@user.Name</h2>
+}
+

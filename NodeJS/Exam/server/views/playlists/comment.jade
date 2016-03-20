@@ -1,0 +1,10 @@
+extends ../shared/layout
+
+block main-content
+    h2= 'Comment Playlist '
+    h3='Title: ' + data.title
+    h3='Creator: ' + data.creator
+    form(method="POST")
+        label(for="comment")
+        textarea(id="comment" name="content")
+        input(type="submit" class="btn" value="Comment")

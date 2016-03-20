@@ -1,0 +1,29 @@
+﻿@model List<MoviesApp.ViewModels.AllMoviesViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>All movies</h2>
+
+@using (Ajax.BeginForm("Search", null, new AjaxOptions
+{
+    UpdateTargetId = "results",
+    InsertionMode = InsertionMode.Replace,
+    HttpMethod = "POST"
+}, new { id = "searchForm" }))
+{
+    <label>Search By Title:</label><br />
+    <input type="text" name="query" onkeydown="changed()" />
+    <input type="submit" value="Search" />
+}
+
+<script>
+    function changed() {
+        $("#searchForm").submit();
+    }
+</script>
+<br />
+<div class="container" id="results">
+        @Html.Partial("_MoviesResult", Model)
+</div>
+<br />
+

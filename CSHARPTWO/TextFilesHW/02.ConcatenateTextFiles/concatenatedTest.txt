@@ -1,0 +1,35 @@
+This method opens a file, reads each line of the file, and then adds each line as an element of a string. It then closes the file. A line is defined as a sequence of characters followed by a carriage return ('\r'), a line feed ('\n'), or a carriage return immediately followed by a line feed. The resulting string does not contain the terminating carriage return and/or line feed.
+This method attempts to automatically detect the encoding of a file based on the presence of byte order marks. Encoding formats UTF-8 and UTF-32 (both big-endian and little-endian) can be detected.
+Use the ReadAllText(String, Encoding) method overload when reading files that might contain imported text, because unrecognized characters may not be read correctly.
+The file handle is guaranteed to be closed by this method, even if exceptions are raised.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+namespace Problem_01_Zerg___
+{
+    class Program
+    {
+ 
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+ 
+            List<string> alphabet = new List<string>() {"Rawr", "Rrrr", "Hsst", "Ssst", "Grrr", "Rarr", "Mrrr", "Psst",
+            "Uaah", "Uaha", "Zzzz", "Bauu", "Djav", "Myau", "Gruh"};
+ 
+            long decimalRepr = 0;
+            for (int i = 0; i < input.Length; i += 4)
+            {
+                var digitIn15 = input.Substring(i, 4);
+                var decValue = alphabet.IndexOf(digitIn15);
+                decimalRepr *= 15;
+                decimalRepr += decValue;
+            }
+            Console.WriteLine(decimalRepr);
+ 
+        }
+    }
+}

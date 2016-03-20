@@ -1,0 +1,37 @@
+//- views/user-details.jade
+extends ../shared/layout
+
+block main-content
+    h1= 'Playlist: '+ data.title
+    h2= 'Category: '+ data.category
+    h2= 'Creator: '+ data.creator
+    h2= 'CreatedOn: '+ data.date
+    h2= 'Rating: ' + data.rating
+    a.btn.btn-success(href="/playlist/"+data.id+"/rate") Rate
+    if(currentUser.username === data.creator)
+        h2 Add videos to playlist: #{data.title}
+        form(method="post")
+            label(for="url") Add Video URL
+            input(type="text" id="url" name="url" placeholder="URL")
+            br
+            input(type="submit" class="btn btn-success" value="Add Video")
+        h2 Delete playlist: #{data.title}
+            a.btn-danger(href="/delete" class="btn btn-lg" value="Delete")
+
+        ul
+            each vid in data.videos
+                li
+                    a(href="#{vid.url}")= vid.url
+
+    h2= 'Comments'
+        a.btn.btn-success(href="/playlist/"+data.id+"/comment")= 'Add comment'
+        h2
+            ul
+                each com in data.comments
+                        p='From: '+ com.username
+                            li.list-unstyled= com.content
+                            br
+
+
+
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TwitterLike.RssReader.RssItem>
+
+@*<ul id="details">
+        @foreach (var item in Model)
+        {
+            <li>@item.Title</li>
+            <li><a href="@item.Link">Go to article</a></li>
+            <li>@item.Description</li>
+            <li>@item.Date</li>
+        }
+    </ul>*@
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row">
+            <strong>Title: @item.Title</strong><br />
+            <strong><img src="@item.ImageUrl" alt="Image"/></strong><br />
+            <strong>Link: <a href="@item.Link">Go to article</a></strong><br />
+            <strong>Date: @item.Date</strong><br />
+            <strong>Description: @item.Description</strong>
+        </div>
+        <br />
+    }
+</div>
+

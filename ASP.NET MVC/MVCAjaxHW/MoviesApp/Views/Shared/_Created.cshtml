@@ -1,0 +1,15 @@
+﻿@model MoviesApp.ViewModels.CreateMovieModel
+
+@if (Model != null)
+{
+    <div class="jumbotron">
+        <strong>Successfully created!</strong>
+        <strong>Title: @Model.Title</strong><br />
+        <strong>Director: @Model.Director</strong><br />
+        <strong>Year: @Model.Year</strong><br />
+        <strong>Female Role: @Model.FemaleRole</strong><br />
+        <strong>Male Role: @Model.MaleRole</strong><br />
+        <strong>Studio: @Model.Studio</strong><br />
+        <strong>Studio Address: @Model.StudioAddress</strong><br />
+    </div>
+}

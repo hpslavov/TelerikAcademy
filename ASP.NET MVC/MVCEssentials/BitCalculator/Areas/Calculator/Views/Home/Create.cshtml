@@ -1,0 +1,19 @@
+﻿@model BitCalculator.Areas.Calculator.Models.CustomObject
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h3>From create</h3>
+<br />
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(c => c.InputNumber)
+        @Html.TextBoxFor(c => c.InputNumber)
+    </p>
+    <p>
+        @Html.LabelFor(c => c.SelectedOption)
+        @Html.DropDownListFor(c => c.SelectedOption, Model.Options)
+    </p>
+    <input type="submit" id="submitForm" value="Submit" />
+}
+

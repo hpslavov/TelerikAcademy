@@ -1,0 +1,42 @@
+﻿@model IEnumerable<MoviesApp.ViewModels.AllMoviesViewModel>
+
+<div id="container">
+    <h3 id="loader" style="display:none">Loading..</h3>
+    @foreach (var movie in Model)
+    {
+
+        <hr />
+        <div class="row">
+            <div>
+                <strong>
+                    Title: @movie.Title
+                </strong><br />
+                <strong>
+                    Director: @movie.Director
+                </strong><br />
+                <strong>
+                    Year: @movie.Year
+                </strong><br />
+                <strong>
+                    Leading Male Role: @movie.LeadingMaleRole
+                </strong><br />
+                <strong>
+                    Leading Female Role: @movie.LeadingFemaleRole
+                </strong><br />
+                <strong>
+                    Studio: @movie.Studio
+                </strong><br />
+
+            </div>
+            @Ajax.ActionLink("Edit", "Edit", "ListMovies", movie, new AjaxOptions
+       {
+           UpdateTargetId = "container",
+           InsertionMode = InsertionMode.Replace,
+           LoadingElementId = "loader"
+       },new { @class = "btn btn-danger" })
+        </div>
+        <hr />
+
+    }
+</div>
+

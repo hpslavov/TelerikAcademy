@@ -1,0 +1,16 @@
+﻿body {
+  text-align: center;
+}
+nav img {
+  width: 250px;
+  height: 180px;
+  display: inline-block;
+  border-radius: 15px;
+}
+#imageHolder {
+  margin: 10px;
+}
+#imageHolder img {
+  border-radius: 15px;
+}
+/*# sourceMappingURL=Less1.css.map */

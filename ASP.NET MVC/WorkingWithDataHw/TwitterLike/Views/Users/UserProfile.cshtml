@@ -1,0 +1,31 @@
+﻿@model TwitterLike.Models.UsersViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-5 pull-left">
+        <ul id="details">
+            Profile Picture
+            <li class="col-md-2 pull-left">
+                <br />
+                <img src="@Model.ImgUrl" alt="Alternate Text" id="imageSize" />
+            </li>
+            <li class="col-md-2 pull-right">
+                @Html.LabelFor(m => m.Name)
+                @Model.Name <br />
+                @Html.LabelFor(m => m.Email)<br />
+                @Model.Email
+                <button id="btnEdit" class="btn btn-danger">Edit</button>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-5 pull-left" id="editResults">
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#btnEdit').click(function () {
+        console.log('here');
+    })
+</script>

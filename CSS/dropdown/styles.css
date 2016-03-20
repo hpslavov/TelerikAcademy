@@ -1,0 +1,45 @@
+﻿ul a{
+    text-decoration:none;
+    color:#98A5B5;
+
+}
+li ul{
+    display:none;
+}
+
+#menu {
+    list-style:none;
+    padding:0;
+    margin:0;
+    
+}
+
+#menu > li > ul{
+    list-style:none;
+}
+#menu > li{
+    display:block;
+    padding:5px 15px;
+}
+
+#menu li:hover > ul{
+    display:block;
+    position:relative;
+    padding:15px;
+}
+
+.list-item:hover{
+    text-decoration:underline;
+}
+
+.list-item > a{
+    color:#000033;
+}
+
+.nested-menu{
+    list-style:none;
+}
+
+.nested-menu > ul a{
+    color:#98A5B5;
+}

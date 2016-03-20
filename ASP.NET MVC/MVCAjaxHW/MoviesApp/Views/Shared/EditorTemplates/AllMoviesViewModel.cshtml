@@ -1,0 +1,52 @@
+﻿@model MoviesApp.ViewModels.AllMoviesViewModel
+
+<script>
+    var redirect = function redirect() {
+        window.location.pathname = "/ListMovies/All";
+    }
+
+    $(function () {
+        $("#Title").attr("readOnly", "true");
+    })
+</script>
+
+@using (Ajax.BeginForm("EditMovie","ListMovies",new AjaxOptions {
+    LoadingElementId = "loader",
+     OnComplete = "redirect"
+}))
+{
+    <div class="alert" id="loader" style="display:none">
+        <h3>Updating....</h3>
+    </div>
+    <ul style="list-style-type:none">
+       <li>
+           <label>Title: @Html.EditorFor(m => m.Title)</label>
+       </li>
+         <li>
+            <label>
+                Director: @Html.EditorFor(m => m.Director)
+            </label>
+        </li>
+        <li>
+            <label>
+                Year: @Html.EditorFor(m => m.Year)
+            </label>
+        </li>
+        <li>
+            <label>
+                Studio: @Html.EditorFor(m => m.Studio)
+            </label>
+        </li>
+        <li>
+            <label>
+                Leading Male: @Html.EditorFor(m => m.LeadingMaleRole)
+            </label>
+        </li>
+        <li>
+            <label>
+                Leading Female: @Html.EditorFor(m => m.LeadingFemaleRole)
+            </label>
+        </li>
+    </ul>
+    <input type="submit" value="Edit" class="btn btn-danger"/>
+}

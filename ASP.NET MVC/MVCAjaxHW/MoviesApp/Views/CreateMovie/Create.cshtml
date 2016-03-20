@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Form Create Movie</h2>
+
+<script>
+    var clearInputs = function clearInputs() {
+        var inputs = $('input');
+        for (var i = 0; i < inputs.length; i+=1) {
+            if (inputs[i].id != 'btnCreate') {
+                inputs[i].value = '';
+            }
+        }
+        console.log(inputs);
+    }
+</script>
+
+<div>
+
+    @using (Ajax.BeginForm("CreateMovie", null, new AjaxOptions
+    {
+        UpdateTargetId = "result",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        OnBegin = "clearInputs"
+    }, new { id = "createMovieForm", @class=" col-md-6" }))
+    {
+
+        <div class="form-horizontal">
+            <div class="editor-label">
+                Title
+            </div>
+            <div class="editor-label">
+                <input type="text" name="title" />
+            </div>
+            <div class="editor-label">
+                Director
+            </div>
+            <div class="editor-label">
+                <input type="text" name="director" />
+            </div>
+            <div class="editor-label">
+                Studio
+            </div>
+            <div class="editor-label">
+                <input type="text" name="studio" />
+            </div>
+            <div class="editor-label">
+                Studio Address
+            </div>
+            <div class="editor-label">
+                <input type="text" name="studioAddress" />
+            </div>
+            <div class="editor-label">
+                Year
+            </div>
+            <div class="editor-label">
+                <input type="text" name="year" />
+            </div>
+            <div class="editor-label">
+                Leading Male
+            </div>
+            <div class="editor-label">
+                <input type="text" name="maleRole" />
+            </div>
+            <div class="editor-label">
+                Leading Female
+            </div>
+            <div class="editor-label">
+                <input type="text" name="femaleRole" />
+            </div>
+            <div class="editor-label">
+                <br />
+                <input id="btnCreate" type="submit" class="btn-danger" />
+            </div>
+        </div>
+    }
+
+    <div id="result" class="col-md-6">
+        @Html.Partial("_Created")
+    </div>
+</div>

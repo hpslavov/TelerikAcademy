@@ -1,0 +1,57 @@
+﻿body{
+    background-color:#EEEEEE;
+    font-family:Arial;
+}
+
+h2{
+    font-weight:lighter;
+}
+
+article{
+    background-color:#ffffff;
+    border:1px solid #999999;
+    padding:15px;
+    overflow:auto;
+    width:450px;
+    margin: 50px 0 30px 0;
+}
+
+p{
+    width:200px;
+}
+
+strong{
+    color:#2E2E2E;
+}
+
+img{
+    float:left;
+    border:1px solid black;
+}
+
+.article-content{
+    float:left;
+    margin-left:20px;
+    width:250px;
+}
+
+.buttondiv{
+    float:right;
+    display:inline;
+}
+
+.listenBtn{
+    background-image:url("listen.png");
+    width:75px;
+    height:25px;
+    border:none;
+    color:#ffffff;
+}
+
+.addBtn{
+    background-image:url("addbutton.png");
+    width:60px;
+    height:23px;
+    border:none;
+    color:white;
+}

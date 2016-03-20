@@ -1,0 +1,9 @@
+extends shared/layout
+block main-content
+    h1 Welcome to YoutubeVideoSystem
+        if(currentUser)
+            h2 Top 8 playlists
+            ul
+                each pl in playlists
+                    li.list-unstyled Playlist:  #{pl.title} Rating: #{pl.rating}
+                        a(href="playlist/#{pl._id}") View details

@@ -1,0 +1,26 @@
+//- view/search-all.jade
+extends ../shared/layout
+block main-content
+        h2 Search
+            if(data)
+                ul Results: #{data.length}
+                    each pl in data
+                        li.list-unstyled Playlist:  #{pl.title}
+                            p Rating: #{pl.rating}
+                                a(href="playlist/#{pl._id}")     View details
+
+            By Category
+            form(method="GET" action="/filteredCategory")
+                label(for="input-category")
+                    select(id="input-category" class="form-control" name="category")
+                        option(value="") Choose Category
+                        each category in categories
+                            option(value="#{category}") #{category}
+                    br
+                    input(type="submit" class="btn btn-lg" value="Search")
+
+            By Title
+                form(method="GET" action="/filteredTitle")
+                    label(for="title")
+                        input(type="text" name="title" id="title" class="form-control")
+                        input(type="submit" class="btn btn-lg" value="Search")

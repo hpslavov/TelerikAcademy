@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form method="get" action="http://telerikacademy.com">
+        <table border="1">
+            <colgroup>
+                <col width="139px"/>
+                <col width="240px"/>
+            </colgroup>
+            <tr>
+                <td align="center"><strong>Last Name</strong></td>
+                <td><input type="text" size="30px" id="last-name" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>First Name</strong></td>
+                <td><input type="text" size="30px" id="first-name" required/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Address</strong></td>
+                <td><textarea id="address" required></textarea></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>City</strong></td>
+                <td><input type="text" size="17px" id="city" required/>&nbsp; State <input type="text" size="4px" id="state"/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Zip/Postal Code</strong></td>
+                <td><input type="text" id="zip-postal-code" required/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Country</strong></td>
+                <td><select id="country">
+                    <option value="bg" selected="selected" >Bulgaria</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"><strong>Phone(country code, area code, number)</strong></td>
+                <td><strong>(</strong>+<input type="text" size="5" /><strong>)</strong>&nbsp;<input type="text" size="4" />&nbsp;<input type="text" size="12"/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>E-mail</strong></td>
+                <td><input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="25px" id="email"/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Birth date</strong></td>
+                <td><input type="text" placeholder="дд.мм.гггг г." id="birth-date"/></td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Gender</strong></td>
+                <td><select id="gender">
+                    <option value="m" selected="selected">Male</option>
+                    <option value="f">Female</option>
+                    <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Starting date</strong></td>
+                <td><input type="radio" name="start-date"/>Spring 2015<input type="radio" name="start-date" />Summer 2015</td>
+            </tr>
+            <tr>
+                <td align="center"><strong>Comments/Questions</strong></td>
+                <td><textarea id="comments"></textarea></td>
+            </tr>
+            <tfoot style="background-color:lightblue">
+                <tr>
+                    <td colspan="2" align="center"><input type="button" value="Submit"/><input type="reset" value="Clear This Form"/></td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
